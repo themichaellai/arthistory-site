@@ -1,1 +1,4 @@
 = @artwork
+= render partial: 'comments/form', locals: {artwork: @artwork, comment: @comment}
+- @artwork.comments.each do |comment|
+  = render partial: 'comments/comment', locals: {comment: comment}

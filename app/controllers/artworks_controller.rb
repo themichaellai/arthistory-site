@@ -14,5 +14,6 @@ class ArtworksController < ApplicationController
 
   def show
     @artwork = Artwork.find(params[:id])
+    @comment = Comment.new
   end
 end
