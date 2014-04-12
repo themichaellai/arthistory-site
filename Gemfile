@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'slim'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem "paperclip", "~> 4.1"
 
 
 # Gems used only for assets and not required
