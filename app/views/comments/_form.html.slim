@@ -1,5 +1,5 @@
-= simple_form_for [artwork, comment], class: 'form' do |f|
+= simple_form_for [artwork, comment], html: {class: 'form comment-form'} do |f|
   .form-group
     = f.input :text, label: false, placeholder: "Write about this piece.", as: :text, input_html: {rows: 5, class: 'comment-box'}
   .form-group
-    = f.button :submit
+    = f.button :submit, class: "btn btn-default"

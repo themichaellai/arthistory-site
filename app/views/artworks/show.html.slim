@@ -1,8 +1,11 @@
 - provide(:title, @artwork.title)
 h1.artwork-title
   = "#{@artwork.title}, #{@artwork.artist}, #{@artwork.info}"
-= image_tag @artwork.image, class: 'artwork-image', widtH: "600px"
-= render partial: 'comments/form', locals: {artwork: @artwork, comment: @comment}
+.artwork-image
+  = image_tag @artwork.image, widtH: "600px"
+.comment-input
+  a(href="#" class="btn btn-default") Make a comment
+  = render partial: 'comments/form', locals: {artwork: @artwork, comment: @comment}
 .comment-section
   - @artwork.comments.each do |comment|
     = render partial: 'comments/comment', locals: {comment: comment}

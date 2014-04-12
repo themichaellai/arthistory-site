@@ -1,3 +1,8 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$ ->
+  commentInput = $('.comment-input')
+  if commentInput.length > 0
+    console.log commentInput
+    commentInput.find('a').on 'click', (e) ->
+      e.preventDefault()
+      $(this).hide()
+      commentInput.find('.comment-form').show()
