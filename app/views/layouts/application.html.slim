@@ -1,0 +1,13 @@
+html
+head
+  title Art History
+  = stylesheet_link_tag "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+body
+  nav.navbar.navbar-default role="navigation"
+    .container
+      .navbar-header
+        = link_to "Art History", root_url, class: 'navbar-brand'
+  .container
+    = yield
