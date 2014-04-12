@@ -20,4 +20,17 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
     @comment = Comment.new
   end
+
+  def edit
+    @artwork = Artwork.find(params[:id])
+  end
+
+  def update
+    @artwork = Artwork.find(params[:id])
+    if @artwork.update_attributes(params[:artwork])
+      redirect_to artwork_path(@artwork)
+    else
+      render 'edit'
+    end
+  end
 end

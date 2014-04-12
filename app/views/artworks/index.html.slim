@@ -3,4 +3,4 @@
     .col-md-1.artwork.center
       = link_to(image_tag(artwork.image.url(:thumb), width: "100px"), artwork_path(artwork))
     .col-md-11.artwork-center
-      = link_to(artwork.title, artwork_path(artwork))
+      == "#{link_to(artwork.title, artwork_path(artwork))}, #{artwork.artist}, #{artwork.info}"
